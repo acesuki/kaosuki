@@ -41,7 +41,7 @@ function saveCredentials(event) {
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
         localStorage.setItem('name', userName);
-        window.location.href="index.html";
+        window.location.href="login.html";
     } else {
         alert('Invalid email or password!');
         window.location.reload();
@@ -100,7 +100,7 @@ function scrollToSection(sectionId) {
     let email = checkUsernameOnLoad();
     if (window.location.pathname.endsWith('index.html')) {
         if (email===null){
-            window.location.href = "index.html";
+            window.location.href = "login.html";
         }
     }
 
