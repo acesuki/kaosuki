@@ -100,7 +100,7 @@ function scrollToSection(sectionId) {
     let email = checkUsernameOnLoad();
     if (window.location.pathname.endsWith('index.html')) {
         if (email===null){
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         }
     }
 
