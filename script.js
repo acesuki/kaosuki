@@ -1,5 +1,3 @@
-
-
 function saveCredentials(event) {
     event.preventDefault(); // Prevent form from submitting
     const userData = {
@@ -49,6 +47,8 @@ function saveCredentials(event) {
     }
 }
 
+document.getElementById("loginform").addEventListener("submit", saveCredentials);
+
 function showLogin() {
     let login = document.getElementById('login');
     login.style.display ="block";
@@ -77,6 +77,7 @@ function logout() {
     //     window.location.href = "index.html";
     // }    
 }
+
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -119,16 +120,16 @@ function goback(){
     // }
 
 
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', saveCredentials);
-    }
+    // const form = document.querySelector('form');
+    // if (form) {
+    //     form.addEventListener('submit', saveCredentials);
+    // }
 
-    if (email != null) {
+    // if (email != null) {
         
-        // usernameNav.style.display='block';
-        // usernameNav.innerHTML=localStorage.getItem('name');
-    }
+    //     // usernameNav.style.display='block';
+    //     // usernameNav.innerHTML=localStorage.getItem('name');
+    // }
 
 
 const navbarMenu = document.querySelector(".navbar .links");
