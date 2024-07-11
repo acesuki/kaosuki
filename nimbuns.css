@@ -18,6 +18,7 @@ a.navbar-brand {
 body > nav > div > a:not(.navbar-brand) {
     display: none;
 }
+
 /* INTERNAL CSS */
 nav ul li a {
     color: #000;

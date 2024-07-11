@@ -41,7 +41,8 @@ function saveCredentials(event) {
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
         localStorage.setItem('name', userName);
-        window.location.href="login.html";
+
+        window.location.href = "login.html";
     } else {
         alert('Invalid email or password!');
         window.location.reload();
@@ -69,10 +70,12 @@ function checkUsernameOnLoad() {
 }
 
 function logout() {
-    if (confirm("Are you sure you want to logout?")) {
-        localStorage.clear();
-        window.location.href="index.html";
-    }    
+    localStorage.clear();
+    window.location.href = "index.html";
+    // if (confirm("Are you sure you want to logout?")) {
+    //     localStorage.clear();
+    //     window.location.href = "index.html";
+    // }    
 }
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -80,6 +83,17 @@ function scrollToSection(sectionId) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  document.getElementById("checkoutform").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    window.location.href = "login.html"
+    alert("Checkout success!");
+});
+
+function goback(){
+    window.location.href = "login.html"
+}
 
  // Add event listener to the form submission
  document.addEventListener('DOMContentLoaded', function() {
@@ -97,12 +111,12 @@ function scrollToSection(sectionId) {
       window.addEventListener('scroll', handleScroll);
 
 
-    let email = checkUsernameOnLoad();
-    if (window.location.pathname.endsWith('index.html')) {
-        if (email===null){
-            window.location.href = "login.html";
-        }
-    }
+    // let email = checkUsernameOnLoad();
+    // if (window.location.pathname.endsWith('index.html')) {
+    //     if (email===null){
+    //         window.location.href = "login.html";
+    //     }
+    // }
 
 
     const form = document.querySelector('form');
