@@ -1,0 +1,340 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>kaosuki</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="nimbuns.css">
+<style>
+
+/* INTERNAL CSS */
+span#usernameNav {
+    display: unset !important;
+    font-weight: 600;
+}
+
+body > nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 4px 4px 4px white;
+    padding-top: 53px !important;
+}
+body > nav {
+    transition: 0.3s ease;
+}
+a.navbar-brand {
+    position: relative;
+}
+
+/* INTERNAL CSS */
+nav ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto 50px;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    position: absolute;
+    top: -3px;
+    left: -58px;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.btn-primary {
+    font-weight: 600;
+    color: white;
+    background-color: black;
+}
+
+body {
+    padding-top: 20px;
+}
+
+.pricing {
+    margin: 20px 0;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.col {
+    padding: 120px;
+    font-weight: 600;
+    padding-top: 200;
+    line-height: 0px;
+    color: black;
+}
+
+.contact {
+    background-color: #212121;
+    margin: 40px 0;
+}
+#login {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999999;
+}
+#login > div {
+    padding: 150px 0 50px;
+    position: relative;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+#login form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(142, 146, 245, 0.9);
+    padding: 30px 60px;
+    color: black;
+}
+#login form > div {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-top: 25px;
+}
+
+#login form > div button {
+    background: none;
+    border: 2px black solid;
+    transition: 0.3s;
+}
+#login form > div button:hover {
+    background: black;
+    color: white;
+}
+#login form > div a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+#login form > div a:hover {
+    color: grey;
+}
+#closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#closeBtn path {
+    fill: black;
+}
+#login form h3 {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+#login form label {
+    color: rgb(53, 0, 0);
+}
+#login form input {
+    background: none;
+    border: 1px black solid;
+    border-radius: 2px;
+    outline: none;
+    padding: 2px 3px;
+}
+</style>
+</head>
+
+<body>
+<nav class="py-4 navbar navbar-expand-lg fixed-top auto-hiding-navbar">
+    <div class="container px-20">
+        <a class="navbar-brand" href=""><img class="logo" src="images/mainlogo.jpg" /> <span id="usernameNav">𝑘𝑎𝑜𝑠𝑢𝑘𝑖</span></a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+        </a>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link active" href="javascript:void(0)" onclick="scrollToSection('banner')">Home</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection('about')">About</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection('products')">Products</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)" onclick="scrollToSection('footer')">Contact</a>
+        </li>
+
+        <li class="nav-item">
+            <a id="logoutNav" class="nav-link" href="javascript:void(0)" onclick="logout()">Logout</a>
+        </li>
+    </ul> 
+</div>
+</div>
+</nav>
+
+
+
+
+<div class="col img-col justify-content-center align-items-center" id="banner">
+    <img src="images/front.PNG" class="img-fluid" alt="kaosuki">
+</div>
+</div>
+</div>
+</section>
+
+<div class="about" id="about">
+    <div class="row text-center">
+        <div class="col about-kao">
+            <h2>about kaosuki .</h2>
+            <p>kaosuki is a makeup brand with an aesthetic theme of coquette, pinks, bunnies, swans, and ribbons.</p>
+            <p>enjoy the splash and hints of pinks and reds onto your work of arts.</p>
+            <br><br>
+                <button type="submit" class="btn btn-primary">message us</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="products"> 
+    <div class="row text-center">
+        <div class="col-md-4 pricing">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">mirror 𐙚</div>
+                
+                <div class="card-body">
+                    <img src="images/mirror.JPG"  class="img-fluid">
+                    <br><br>
+                    <h5 class="card-title">swan version</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">₱1,500</h6>
+                    <br>
+                    <p class="card-text">The appearance is engraved with delicate ballet elements in relief, painted with beautiful swans. Wherever you are, you can check your look with this super exquisite hand mirror.</p>
+                    <br><br><br><br>
+                    <a href="checkout.html" class="btn btn-primary">add to bag</a>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-4 pricing">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">lipstick 𓏲</div>
+        <div class="card-body">
+            <img src="images/lip.JPG"  class="img-fluid">
+            <br><br>
+            <h5 class="card-title">bubble gum</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">₱699</h6>
+            <br>
+            <p class="card-text">Experience the bubble gum lippie, its fresh, balm-like texture effortlessly glides onto your lips, and beautifully combines the qualities of sheer and satin lipsticks, the perfect companion for hydrated, long-lasting color and incredible shine that lasts for hours.
+        
+</p>
+            <br>
+            <a href="checkout.html" class="btn btn-primary">add to bag</a>
+            <br><br>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 pricing">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">blush ᡣ𐭩
+</div>
+
+<div class="card-body">
+    <img src="images/blush.JPG"  class="img-fluid">
+    <br><br>
+    <h5 class="card-title">cherry kiss</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">₱999</h6>
+    <br>
+    <p class="card-text">The blush depicts a fairy tale in embossed, artisanal clarity that restores design details and has a lightweight, creamy powder texture that has been newly upgraded.</p>
+    <br><br><br><br>
+    <a href="checkout.html " class="btn btn-primary">add to bag</a>
+    <br><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="about" id="footer">
+    <footer class="py-5 px-10">
+        <div class="row">
+            <div class="col-2">
+                <h5>Resources</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Find A Store</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Become A Member</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Student Discounts</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>Help</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Get Help</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Order Status</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Delivery</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Returns</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Payment Options</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-2">
+                <h5>Company</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Kaosuki</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">News</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Investors</a></li>
+                </ul>
+            </div>
+
+            <p>Website Creator does not claim any ownership of the images used. <br> Products' images and information are from Flower Knows.
+            <br>This was created for educational purposes only.</p>
+
+        <div class="d-flex justify-content-between border-top">
+            <p>© 2024 Kaosuki, Inc. All rights reserved Made by: Clariz Margaret R. Taladtad from FEU-IT</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+<script src="script.js">
+</script>
+
+</body>
+</html>

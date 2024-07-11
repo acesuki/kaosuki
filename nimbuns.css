@@ -1,0 +1,185 @@
+/* INTERNAL CSS */
+span#usernameNav {
+    display: unset !important;
+    font-weight: 600;
+}
+
+body > nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 4px 4px 4px white;
+    padding-top: 53px !important;
+}
+body > nav {
+    transition: 0.3s ease;
+}
+a.navbar-brand {
+    position: relative;
+}
+body > nav > div > a:not(.navbar-brand) {
+    display: none;
+}
+
+/* INTERNAL CSS */
+nav ul li a {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto 50px;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    position: absolute;
+    top: -3px;
+    left: -58px;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.btn-primary {
+    font-weight: 600;
+    color: white;
+    background-color: #ffcbd9;
+}
+
+.btn-primary:hover {
+    background-color: rgb(177, 80, 112);
+}
+
+body {
+    padding-top: 20px;
+}
+
+.pricing {
+    margin: 20px 0;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.col {
+    padding: 120px;
+    font-weight: 600;
+    padding-top: 200px;
+}
+
+.contact {
+    background-color: #ffcbd9;
+    margin: 40px 0;
+}
+#login {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999999;
+}
+#login > div {
+    padding: 150px 0 50px;
+    position: relative;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+#login form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(142, 146, 245, 0.9);
+    padding: 30px 60px;
+    color: black;
+}
+#login form > div {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-top: 25px;
+}
+
+#login form > div button {
+    background: none;
+    border: 2px black solid;
+    transition: 0.3s;
+}
+#login form > div button:hover {
+    background: black;
+    color: white;
+}
+#login form > div a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+#login form > div a:hover {
+    color: grey;
+}
+#closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#closeBtn path {
+    fill: black;
+}
+#login form h3 {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+#login form label {
+    color: rgb(53, 0, 0);
+}
+#login form input {
+    background: none;
+    border: 1px black solid;
+    border-radius: 2px;
+    outline: none;
+    padding: 2px 3px;
+}
+#banner {
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 992px) {
+    body > nav > div > a:not(.navbar-brand) {
+        display: block !important;
+    }
+}
+body > nav > div > a:not(.navbar-brand) {
+    display: none;
+}
+
+.about-kao {
+    background-color: #ffecf1;
+}
+
+
+a:hover {
+    color:rgb(177, 80, 112);
+}
+
+#footer {
+    background-color: #ffecf1;
+    width: 100%;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
