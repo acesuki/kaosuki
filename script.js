@@ -60,11 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const loginForm = document.getElementById("loginform");
     if (loginForm) {
-        loginForm.addEventListener("submit", saveCredentials);
-    }
-});
-
-function saveCredentials(event) {
+        loginForm.addEventListener("submit", function saveCredentials(event) {
     event.preventDefault(); // Prevent form from submitting
     const userData = {
         1: {
@@ -111,7 +107,9 @@ function saveCredentials(event) {
         alert('Invalid email or password!');
         window.location.reload();
     }
-}
+});
+    }
+});
 
 function showLogin() {
     let login = document.getElementById('login');
