@@ -88,7 +88,7 @@ function scrollToSection(sectionId) {
   document.getElementById("checkoutform").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    window.location.href = "login.html"
+    window.location.href = "login.html";
     alert("Checkout success!");
 });
 
